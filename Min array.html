@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function minArray(array) {
+        if(array.length ===0){
+            return -1
+        }
+        let min = array[0];
+        for(let i = 1; i < array.length; i++){
+        if (array[i] < min){
+            min=array[i];
+        }
+        }
+
+        return min;
+    }
+    function locateArray(array){    /*Tìm vị trí của min*/
+        if(array.length ===0){
+            return -1
+        }
+        let index
+        let min = array[0];
+        for(let i = 1; i < array.length; i++){
+            if (array[i] < min){
+                min=array[i];
+                index = i;
+            }
+        }
+        return index;
+    }
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    let arr2 = [7, 12, 6, 9, 20, 56, 89]
+    let arr3 = [];
+    let arr4 = [0, 0, 0, 0, 0, 0];
+
+    console.log(arr1)
+    let locate1 = locateArray(arr1);
+    let min1 = minArray(arr1)
+    console.log("Phần tử nhỏ nhất là "+min1+" nằm ở "+locate1)
+
+    console.log(arr2)
+    let locate2 = locateArray(arr2);
+    let min2 = minArray(arr2)
+    console.log("Phần tử nhỏ nhất là "+min2+" nằm ở "+locate2)
+
+    console.log(arr3)
+    let locate3 = locateArray(arr3);
+    let min3 = minArray(arr3)
+    console.log("Phần tử nhỏ nhất là "+min3+" nằm ở "+locate3)
+
+    console.log(arr4)
+    let locate4 = locateArray(arr4);
+    let min4 = minArray(arr4)
+    console.log("Phần tử nhỏ nhất là "+min4+" nằm ở "+locate4)
+</script>
+</body>
+</html>
